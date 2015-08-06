@@ -23,7 +23,6 @@ public class PersonController {
 
     @RequestMapping(value = {"/","index"})
     public String index(Model model){
-        System.out.println(personService.findAll());
         model.addAttribute("persons", personService.findAll());
         return "person/index";
     }
